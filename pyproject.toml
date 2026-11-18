@@ -1,0 +1,16 @@
+[project]
+name = "customer-care-agent-rebuild"
+version = "0.1.0"
+description = "A customer care and grievance workflow built with LangGraph"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "fastapi[standard]>=0.163.2",
+    "langgraph>=1.2.22",
+    "psycopg2-binary>=2.9.13",
+    "pydantic>=2.14.3",
+    "sqlalchemy>=2.1.9",
+]
+
+[project.optional-dependencies]
+openai = ["langchain>=1,<2", "langchain-openai>=1,<2"]
+bedrock = ["langchain>=1,<2", "langchain-aws>=1,<2"]
